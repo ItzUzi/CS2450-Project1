@@ -1,0 +1,266 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MainFrame",
+            "request": "launch",
+            "mainClass": "MainFrame",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch assignment3a",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "assignment3a",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnnonInnerClassDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "AnnonInnerClassDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnonInnerClassKiloConverter",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "AnonInnerClassKiloConverter",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch TaskA",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "TaskA",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch TaskB",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "TaskB",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch BorderPaneDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "BorderPaneDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch BorderPaneDemo2",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "BorderPaneDemo2",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch BorderPaneDemo3",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "BorderPaneDemo3",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch ButtonDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "ButtonDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch CheckerBoard",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "CheckerBoard",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch EventDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "EventDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch GridPaneButtonDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "GridPaneButtonDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch GridPaneDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "GridPaneDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch GridPaneImages",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "GridPaneImages",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch GridPaneLabels",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "GridPaneLabels",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch HBoxDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "HBoxDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch HBoxImages",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "HBoxImages",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch HBoxImagesWithPadding",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "HBoxImagesWithPadding",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch HBoxImagesWithSpacing",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "HBoxImagesWithSpacing",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "Lecture4-Code_87255051",
+            "vmArgs": "--module-path C:\\Users\\xuecl\\OneDrive\\Desktop\\javafx-sdk-17.0.2\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld2",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "HelloWorld2",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch ImageDemo",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "request": "launch",
+            "mainClass": "ImageDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch ImageInternetDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "ImageInternetDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch KiloConverter",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "KiloConverter",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch LambdaDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "LambdaDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch LambdaKiloConverter",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "LambdaKiloConverter",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyFirstGUI",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "MyFirstGUI",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch NestedLayout",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "NestedLayout",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch TextFieldDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "TextFieldDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch VBoxDemo",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "VBoxDemo",
+            "projectName": "Lecture4-Code_87255051"
+        },
+        {
+            "type": "java",
+            "name": "Launch VBoxImagesWithPadding",
+            "request": "launch",
+            "vmArgs": "--module-path c:/Users/xuecl/OneDrive/Desktop/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "VBoxImagesWithPadding",
+            "projectName": "Lecture4-Code_87255051"
+        }
+    ]
+}
