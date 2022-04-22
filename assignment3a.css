@@ -1,0 +1,21 @@
+.button {
+    -fx-background-color: #626262;
+    -fx-font-size: 16px;
+    -fx-text-align: center;
+    -fx-text-fill: white;
+    -fx-padding: 5;
+
+}
+.largeText {
+    -fx-font-size: 64px;
+    -fx-font-weight: bold;
+}
+.intro {
+    -fx-font-size: 16px;
+    -fx-font-weight: medium;
+}
+.replace2_imageView {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

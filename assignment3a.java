@@ -46,9 +46,9 @@ public class assignment3a extends Application{
         hbox.setBackground(new Background(new BackgroundFill(Color.web("#C4C4C4"), null, null)));
 
         Text largeText = new Text("Write once,\nTest everywhere");
-        largeText.setStyle("-fx-font-size: 64px; -fx-font-weight: bold");
+        largeText.getStyleClass().add("largeText");
         Text intro = new Text("Java is a high-level, class-based, object-oriented programming\nlanguage that is designed to have as few implementation\ndependencies as possible [1]");
-        intro.setStyle("-fx-font-size: 16px; -fx-font-weight: medium");
+        intro.getStyleClass().add("intro");
 
         Button download_java_18 = new Button("Downlaod Java 18");
         Button learn_java = new Button("Learn Java");
@@ -58,11 +58,27 @@ public class assignment3a extends Application{
         VBox introVbox = new VBox(20, largeText, intro, download_button_box);
         introVbox.setPadding(new Insets(10, 200, 10, 200));
 
-        HBox introductionBox = new HBox(10, introVbox);
+        Image next_to_intro_image = new Image("file:java_replace.png");
+        ImageView next_to_intro_imageview = new ImageView(next_to_intro_image);
+        next_to_intro_imageview.setFitWidth(470);
+        next_to_intro_imageview.setPreserveRatio(true);
 
-        VBox box = new VBox(50, hbox, introductionBox);
+        HBox introductionBox = new HBox(50, introVbox, next_to_intro_imageview);
+        introductionBox.setPadding(new Insets(10, 200, 10, 200));
+
+        Image replace2_image = new Image("file:replace2.jpg");
+        ImageView replace2_imageView = new ImageView(replace2_image);
+        replace2_imageView.setFitWidth(970);
+        replace2_imageView.setPreserveRatio(true);
+        replace2_imageView.getStyleClass().add("replace2_imageView");
+        VBox replace2_container = new VBox(replace2_imageView);
+        replace2_container.setPadding(new Insets(10, 500, 10, 500));
+
+        VBox box = new VBox(50, hbox, introductionBox, replace2_container);
+        // box.setPadding(new Insets(50, 50, 50, 50));
 
         final Scene scene = new Scene(box,300, 250);
+        scene.getStylesheets().add("assignment3a.css");
         scene.setFill(Color.WHITE);
         stage.setScene(scene);
 
