@@ -1,12 +1,16 @@
-import javax.swing.text.Document;
+import java.util.ArrayList;
+import java.util.List;
 
 import javafx.application.Application;
-import javafx.geometry.HorizontalDirection;
 import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
@@ -27,6 +31,8 @@ public class assignment3a extends Application{
 
     @Override
     public void start(Stage stage) {
+        ScrollPane scroll = new ScrollPane();
+
         Image image = new Image("file:java.png");
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(100);
@@ -60,7 +66,7 @@ public class assignment3a extends Application{
 
         Image next_to_intro_image = new Image("file:java_replace.png");
         ImageView next_to_intro_imageview = new ImageView(next_to_intro_image);
-        next_to_intro_imageview.setFitWidth(470);
+        next_to_intro_imageview.setFitWidth(300);
         next_to_intro_imageview.setPreserveRatio(true);
 
         HBox introductionBox = new HBox(50, introVbox, next_to_intro_imageview);
@@ -68,16 +74,71 @@ public class assignment3a extends Application{
 
         Image replace2_image = new Image("file:replace2.jpg");
         ImageView replace2_imageView = new ImageView(replace2_image);
-        replace2_imageView.setFitWidth(970);
+        replace2_imageView.setFitWidth(900);
         replace2_imageView.setPreserveRatio(true);
         replace2_imageView.getStyleClass().add("replace2_imageView");
-        VBox replace2_container = new VBox(replace2_imageView);
+        Text explore = new Text("Explore");
+        explore.getStyleClass().add("explore");
+
+        VBox replace2_container = new VBox(20, replace2_imageView, explore);
         replace2_container.setPadding(new Insets(10, 500, 10, 500));
+        replace2_container.setAlignment(Pos.CENTER);
 
-        VBox box = new VBox(50, hbox, introductionBox, replace2_container);
-        // box.setPadding(new Insets(50, 50, 50, 50));
+        List<Image> under_explore_image_array = new ArrayList<>();
 
-        final Scene scene = new Scene(box,300, 250);
+        for (int i = 1; i < 6; i++) {
+            under_explore_image_array.add(new Image(getClass().getResource(i + ".jpg").toExternalForm()));
+        }
+
+        HBox array_image_container = new HBox();
+        array_image_container.setSpacing(40);
+        array_image_container.setPadding(new Insets(10, 100, 10, 100));
+        array_image_container.setAlignment(Pos.CENTER);
+        List<ImageView> under_explore_imageview_array = new ArrayList<>();
+
+        // ScrollPane sc = new ScrollPane();
+
+        for (int i = 0; i < under_explore_image_array.size(); i++) {
+            under_explore_imageview_array.add(new ImageView(under_explore_image_array.get(i)));
+            array_image_container.getChildren().add(under_explore_imageview_array.get(i));
+            // sc.getChildrenUnmodifiable().add(under_explore_imageview_array.get(i));
+        }
+
+
+        // ScrollBar scrollbar = new ScrollBar();
+        // scrollbar.setMin(0);
+        // scrollbar.setOrientation(Orientation.HORIZONTAL);
+        // VBox image_scroll_container = new VBox(array_image_container, scrollbar);
+
+        // sc.setHbarPolicy(ScrollBarPolicy.AS_NEEDED);
+        // sc.setVbarPolicy(ScrollBarPolicy.NEVER);
+        // sc.setContent(array_image_container);
+
+        Text event = new Text("Events");
+        Text news = new Text("News");
+        event.getStyleClass().add("explore");
+        news.getStyleClass().add("explore");
+
+        Image events_image = new Image("file:events.jpg");
+        ImageView events_imageView = new ImageView(events_image);
+
+        Image news_image = new Image("file:news.jpg");
+        ImageView news_imageView = new ImageView(news_image);
+
+        VBox events_box = new VBox(10, event, events_imageView);
+        events_box.setPadding(new Insets(10, 50, 10, 50));
+        VBox news_box = new VBox(10, news, news_imageView);
+        news_box.setPadding(new Insets(10, 50, 10, 50));
+
+        HBox event_news_container = new HBox(50, events_box, news_box);
+        event_news_container.setAlignment(Pos.CENTER);
+
+        VBox box = new VBox(50, hbox, introductionBox, replace2_container, array_image_container, event_news_container);
+        scroll.setVbarPolicy(ScrollBarPolicy.AS_NEEDED);
+        scroll.setHbarPolicy(ScrollBarPolicy.NEVER);
+        scroll.setContent(box);
+
+        final Scene scene = new Scene(scroll, 300, 250);
         scene.getStylesheets().add("assignment3a.css");
         scene.setFill(Color.WHITE);
         stage.setScene(scene);

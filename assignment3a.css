@@ -19,3 +19,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+.explore {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
