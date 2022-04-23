@@ -35,7 +35,7 @@ public class assignment3a extends Application{
 
         Image image = new Image("file:java.png");
         ImageView imageView = new ImageView(image);
-        imageView.setFitWidth(100);
+        imageView.setFitWidth(200);
         imageView.setPreserveRatio(true);
         Text docunation = new Text("Docunation");
         Text download = new Text("Downloads");
@@ -66,7 +66,7 @@ public class assignment3a extends Application{
 
         Image next_to_intro_image = new Image("file:java_replace.png");
         ImageView next_to_intro_imageview = new ImageView(next_to_intro_image);
-        next_to_intro_imageview.setFitWidth(300);
+        next_to_intro_imageview.setFitWidth(500);
         next_to_intro_imageview.setPreserveRatio(true);
 
         HBox introductionBox = new HBox(50, introVbox, next_to_intro_imageview);
@@ -96,23 +96,11 @@ public class assignment3a extends Application{
         array_image_container.setAlignment(Pos.CENTER);
         List<ImageView> under_explore_imageview_array = new ArrayList<>();
 
-        // ScrollPane sc = new ScrollPane();
 
         for (int i = 0; i < under_explore_image_array.size(); i++) {
             under_explore_imageview_array.add(new ImageView(under_explore_image_array.get(i)));
             array_image_container.getChildren().add(under_explore_imageview_array.get(i));
-            // sc.getChildrenUnmodifiable().add(under_explore_imageview_array.get(i));
         }
-
-
-        // ScrollBar scrollbar = new ScrollBar();
-        // scrollbar.setMin(0);
-        // scrollbar.setOrientation(Orientation.HORIZONTAL);
-        // VBox image_scroll_container = new VBox(array_image_container, scrollbar);
-
-        // sc.setHbarPolicy(ScrollBarPolicy.AS_NEEDED);
-        // sc.setVbarPolicy(ScrollBarPolicy.NEVER);
-        // sc.setContent(array_image_container);
 
         Text event = new Text("Events");
         Text news = new Text("News");
@@ -133,7 +121,58 @@ public class assignment3a extends Application{
         HBox event_news_container = new HBox(50, events_box, news_box);
         event_news_container.setAlignment(Pos.CENTER);
 
-        VBox box = new VBox(50, hbox, introductionBox, replace2_container, array_image_container, event_news_container);
+        Text about = new Text("About");
+        Text about_java = new Text("About Java");
+        Text about_openJDK = new Text("About OpenJDK");
+        Text getting_started = new Text("Getting Started");
+        Text oracle_se = new Text("Oracle Java SE Subscription");
+        about.getStyleClass().add("about");
+        about_java.getStyleClass().add("about_content");
+        about_openJDK.getStyleClass().add("about_content");
+        getting_started.getStyleClass().add("about_content");
+        oracle_se.getStyleClass().add("about_content");
+
+        VBox about_box = new VBox(10, about, about_java, about_openJDK, getting_started, oracle_se);
+        about_box.setPadding(new Insets(10, 20, 10, 20));
+        about_box.setAlignment(Pos.CENTER_LEFT);
+
+        Text foot_download = new Text("Downloads");
+        Text all_release = new Text("All Releases");
+        Text source_code = new Text("Source Code");
+        foot_download.getStyleClass().add("about");
+        all_release.getStyleClass().add("about_content");
+        source_code.getStyleClass().add("about_content");
+
+        VBox download_box = new VBox(10, foot_download, all_release, source_code);
+        download_box.setPadding(new Insets(10, 20, 10, 20));
+        download_box.setAlignment(Pos.TOP_LEFT);
+
+        Text follow_us = new Text("Follow us");
+
+        Image ins = new Image("file:ins.png");
+        ImageView ins_view = new ImageView(ins);
+        ins_view.setFitWidth(24);
+        ins_view.setPreserveRatio(true);
+        Image facebook = new Image("file:facebook.png");
+        ImageView  facebook_view = new ImageView(facebook);
+        facebook_view.setFitWidth(24);
+        facebook_view.setPreserveRatio(true);
+        Image github = new Image("file:github.png");
+        ImageView github_view = new ImageView(github);
+        github_view.setFitWidth(24);
+        github_view.setPreserveRatio(true);
+        follow_us.getStyleClass().add("about");
+        HBox social_box = new HBox(20, ins_view, facebook_view, github_view);
+
+        VBox follow_us_box = new VBox(50, follow_us, social_box);
+        follow_us_box.setPadding(new Insets(10, 20, 10, 20));
+        follow_us_box.setAlignment(Pos.TOP_LEFT);
+
+        HBox footer = new HBox(80, about_box, download_box, follow_us_box);
+        footer.getStyleClass().add("footer_box");
+        footer.setAlignment(Pos.CENTER);
+
+        VBox box = new VBox(50, hbox, introductionBox, replace2_container, array_image_container, event_news_container, footer);
         scroll.setVbarPolicy(ScrollBarPolicy.AS_NEEDED);
         scroll.setHbarPolicy(ScrollBarPolicy.NEVER);
         scroll.setContent(box);
