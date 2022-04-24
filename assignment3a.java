@@ -1,3 +1,5 @@
+package com.example.demo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,13 +39,13 @@ public class assignment3a extends Application{
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(200);
         imageView.setPreserveRatio(true);
-        Text docunation = new Text("Docunation");
+        Text documentation = new Text("Documentation");
         Text download = new Text("Downloads");
         Text what_java = new Text("What is Java?");
         Text help =  new Text("Help");
         Text language = new Text("Language");
 
-        HBox textBox = new HBox(20, docunation, download, what_java, help, language);
+        HBox textBox = new HBox(20, documentation, download, what_java, help, language);
         textBox.setStyle("-fx-font-size: 16px; -fx-font-weight: medium");
         textBox.setPadding(new Insets(25, 25, 25, 400));
 

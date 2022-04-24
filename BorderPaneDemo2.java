@@ -1,3 +1,5 @@
+package com.example.demo;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -43,7 +45,7 @@ public class BorderPaneDemo2 extends Application
       // Create a BorderPane with a node in the center.
       BorderPane borderPane = new BorderPane(centerHBox);
       
-      // Add the buttons to the BorderPane’s regions.
+      // Add the buttons to the BorderPaneï¿½s regions.
       borderPane.setTop(topHBox);
       borderPane.setBottom(bottomHBox);
       borderPane.setLeft(leftVBox);
