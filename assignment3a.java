@@ -55,7 +55,7 @@ public class assignment3a extends Application{
         Text intro = new Text("Java is a high-level, class-based, object-oriented programming\nlanguage that is designed to have as few implementation\ndependencies as possible [1]");
         intro.getStyleClass().add("intro");
 
-        Button download_java_18 = new Button("Downlaod Java 18");
+        Button download_java_18 = new Button("Download Java 18");
         Button learn_java = new Button("Learn Java");
 
         HBox download_button_box = new HBox(20, download_java_18, learn_java);
