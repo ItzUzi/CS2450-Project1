@@ -36,3 +36,9 @@
     -fx-background-color: black;
     -fx-padding: 10;
 }
+
+.reference {
+    -fx-font-size: 10px;
+    -fx-fill: black;
+    -fx-font-weight: lighter;
+}

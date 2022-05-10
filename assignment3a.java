@@ -60,16 +60,65 @@ public class assignment3a extends Application{
         Button download_java_18 = new Button("Download Java 18");
         download_java_18.setOnAction(e->
         {
+            String downloadLinks = "-fx-font-size: 14px; -fx-text-fill: Blue; -fx-font-weight: normal";
+            String space = "-fx-font-size: 14px; -fx-text-fill: Black; -fx-font-weight: bolder";
             Label downloadJava = new Label("Java Downloads:");
             Label java18 = new Label("Java 18 download");
-            java18.setStyle("-fx-text-fill: Blue");
+            Label java17 = new Label("Java 17 download");
+            Label java16 = new Label("Java 16 download");
+            Label java15 = new Label("Java 15 download");
+            Label java14 = new Label("Java 14 download");
+            Label changelog18 = new Label("[changelog]");
+            Label changelog17 = new Label("[changelog]");
+            Label changelog16 = new Label("[changelog]");
+            Label changelog15 = new Label("[changelog]");
+            Label changelog14 = new Label("[changelog]");
+            Label space18 = new Label(".   .   .   .   .   .   .   .   .");
+            Label space17 = new Label(".   .   .   .   .   .   .   .   .");
+            Label space16 = new Label(".   .   .   .   .   .   .   .   .");
+            Label space15 = new Label(".   .   .   .   .   .   .   .   .");
+            Label space14 = new Label(".   .   .   .   .   .   .   .   .");
+
+            java18.setStyle(downloadLinks);
+            java17.setStyle(downloadLinks);
+            java16.setStyle(downloadLinks);
+            java15.setStyle(downloadLinks);
+            java14.setStyle(downloadLinks);
+
+            changelog18.setStyle(downloadLinks);
+            changelog17.setStyle(downloadLinks);
+            changelog16.setStyle(downloadLinks);
+            changelog15.setStyle(downloadLinks);
+            changelog14.setStyle(downloadLinks);
+
+            space18.setStyle(space);
+            space17.setStyle(space);
+            space16.setStyle(space);
+            space15.setStyle(space);
+            space14.setStyle(space);
+
+            downloadJava.setStyle("-fx-font-size: 16px; -fx-font-weight: bold");
+
             Stage newWindow = new Stage();
             newWindow.setTitle("Java Downloads");
+
+            VBox left = new VBox(downloadJava, java18, java17, java16, java15, java14);
+            left.setSpacing(10);
+            VBox mid = new VBox(space18, space17, space16, space15, space14);
+            mid.setPadding(new Insets(35));
+            mid.setSpacing(10);
+            VBox right = new VBox(changelog18, changelog17, changelog16, changelog15, changelog14);
+            right.setPadding(new Insets(35));
+            right.setSpacing(10);
+
             GridPane grid = new GridPane();
-            grid.add(java18, 0 ,0);
-            grid.setMinWidth(200);
-            grid.setMinHeight(200);
-            grid.setPadding(new Insets(10, 200, 10, 200));
+            grid.add(left, 0, 0);
+            grid.add(mid, 1,0);
+            grid.add(right, 2, 0);
+
+            grid.setVgap(10);
+            grid.setHgap(5);
+            grid.setPadding(new Insets(10, 40, 10, 40));
             grid.setAlignment(Pos.CENTER);
             Scene scene = new Scene(grid);
             newWindow.setScene(scene);
@@ -78,17 +127,41 @@ public class assignment3a extends Application{
         Button learn_java = new Button("Learn Java");
         learn_java.setOnAction(e->
         {
-            Label label = new Label("Learn Java:");
-            Label text = new Label("""
-                    Java is an object-oriented programming language that produces software for
-                     multiple platforms. When a programmer writes a Java application, the compiled code (known as
-                    bytecode) runs on most operating systems (OS), including Windows, Linux and Mac OS""");
+            Label about = new Label("Learn Java:");
+            Text about_content = new Text("""
+                   Java is a programming language and computing platform first released by Sun Microsystems in 1995.
+                   It has evolved from humble beginnings to power a large share of today’s digital world, by providing
+                   the reliable platform upon which many services and applications are built. New, innovative products
+                   and digital services designed for the future continue to rely on Java, as well.
+                   
+                   There are many applications and even some websites that will not function unless you have
+                    Java installed. Java.com, this website, is intended for consumers who require Java for their 
+                    desktop applications – specifically applications targeting Java 8. Developers as well as users that 
+                    would like to learn Java programming should visit the dev.java website instead and business users 
+                    should visit oracle.com/java for more information.
+                   """);
+            Text reference = new Text("from java.com What is java page");
+
+            about_content.setStyle("-fx-font-size: 16px;" +
+                                "-fx-fill: black;" +
+                                "-fx-font-weight: normal;");
+
+            reference.setStyle("-fx-font-size: 10px;" +
+                                "-fx-fill: grey;" +
+                                "-fx-font-weight: lighter;");
+
+            about.setStyle("-fx-font-size: 20px;"+
+                        "-fx-fill: black;" +
+                        "-fx-font-weight: bold;");
+
             Stage newWindow = new Stage();
             newWindow.setTitle("About Java");
             GridPane grid = new GridPane();
-            grid.add(label, 0, 0);
-            grid.add(text, 1, 1);
-            grid.setPadding(new Insets(10, 200, 10, 200));
+            grid.add(about, 0, 0);
+            grid.add(about_content, 1, 1);
+            grid.add(reference, 2, 2);
+            grid.setHgap(20);
+            grid.setVgap(20);
             grid.setAlignment(Pos.CENTER);
             Scene scene = new Scene(grid, newWindow.getHeight(), newWindow.getWidth());
             newWindow.setScene(scene);
