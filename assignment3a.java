@@ -50,7 +50,10 @@ public class assignment3a extends Application{
 
         Text largeText = new Text("Write once,\nTest everywhere");
         largeText.getStyleClass().add("largeText");
-        Text intro = new Text("Java is a high-level, class-based, object-oriented programming\nlanguage that is designed to have as few implementation\ndependencies as possible [1]");
+        Text intro = new Text("""
+                Java is a high-level, class-based, object-oriented programming
+                language that is designed to have as few implementation
+                dependencies as possible [1]""");
         intro.getStyleClass().add("intro");
 
         Button download_java_18 = new Button("Download Java 18");
@@ -58,13 +61,17 @@ public class assignment3a extends Application{
         learn_java.setOnAction(e->
         {
             Label label = new Label("Learn Java:");
-            Label text = new Label("Java is a programming language...");
+            Label text = new Label("""
+                    Java is an object-oriented programming language that produces software for
+                     multiple platforms. When a programmer writes a Java application, the compiled code (known as
+                    bytecode) runs on most operating systems (OS), including Windows, Linux and Mac OS""");
             Stage newWindow = new Stage();
             newWindow.setTitle("About Java");
             GridPane grid = new GridPane();
             grid.add(label, 0, 0);
             grid.add(text, 1, 1);
             grid.setPadding(new Insets(10, 200, 10, 200));
+            grid.setAlignment(Pos.CENTER);
             Scene scene = new Scene(grid, newWindow.getHeight(), newWindow.getWidth());
             newWindow.setScene(scene);
             newWindow.show();
