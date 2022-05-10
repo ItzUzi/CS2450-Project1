@@ -11,7 +11,7 @@
 }
 .intro {
     -fx-font-size: 16px;
-    -fx-font-weight: medium;
+    -fx-font-weight: normal;
 }
 .replace2_imageView {
     display: block;
@@ -30,7 +30,7 @@
 .about_content {
     -fx-font-size: 16px;
     -fx-fill: white;
-    -fx-font-weight: medium;
+    -fx-font-weight: normal;
 }
 .footer_box {
     -fx-background-color: black;

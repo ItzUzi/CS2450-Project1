@@ -15,6 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -41,7 +42,7 @@ public class assignment3a extends Application{
         Text language = new Text("Language");
 
         HBox textBox = new HBox(20, documentation, download, what_java, help, language);
-        textBox.setStyle("-fx-font-size: 16px; -fx-font-weight: medium");
+        textBox.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
         textBox.setPadding(new Insets(25, 25, 25, 400));
 
         HBox hbox = new HBox(500, imageView, textBox);
@@ -57,6 +58,23 @@ public class assignment3a extends Application{
         intro.getStyleClass().add("intro");
 
         Button download_java_18 = new Button("Download Java 18");
+        download_java_18.setOnAction(e->
+        {
+            Label downloadJava = new Label("Java Downloads:");
+            Label java18 = new Label("Java 18 download");
+            java18.setStyle("-fx-text-fill: Blue");
+            Stage newWindow = new Stage();
+            newWindow.setTitle("Java Downloads");
+            GridPane grid = new GridPane();
+            grid.add(java18, 0 ,0);
+            grid.setMinWidth(200);
+            grid.setMinHeight(200);
+            grid.setPadding(new Insets(10, 200, 10, 200));
+            grid.setAlignment(Pos.CENTER);
+            Scene scene = new Scene(grid);
+            newWindow.setScene(scene);
+            newWindow.show();
+        });
         Button learn_java = new Button("Learn Java");
         learn_java.setOnAction(e->
         {
