@@ -7,15 +7,13 @@ import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
@@ -57,7 +55,21 @@ public class assignment3a extends Application{
 
         Button download_java_18 = new Button("Download Java 18");
         Button learn_java = new Button("Learn Java");
-
+        learn_java.setOnAction(e->
+        {
+            Label label = new Label("Learn Java:");
+            Label text = new Label("Java is a programming language...");
+            Stage newWindow = new Stage();
+            newWindow.setTitle("About Java");
+            GridPane grid = new GridPane();
+            grid.add(label, 0, 0);
+            grid.add(text, 1, 1);
+            grid.setPadding(new Insets(10, 200, 10, 200));
+            Scene scene = new Scene(grid, newWindow.getHeight(), newWindow.getWidth());
+            newWindow.setScene(scene);
+            newWindow.show();
+        }
+        );
         HBox download_button_box = new HBox(20, download_java_18, learn_java);
 
         VBox introVbox = new VBox(20, largeText, intro, download_button_box);
