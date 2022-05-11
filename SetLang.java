@@ -277,6 +277,9 @@ public class SetLang {
         scene.getStylesheets().add("assignment3a.css");
         scene.setFill(Color.WHITE);
         stage.setScene(scene);
+
+        fontSelector.setOnAction(e->assignment3a.setFont(fontSelector, stage, scene, fontSizes));
+
         stage.show();
     }
 
@@ -543,6 +546,9 @@ public class SetLang {
         scene.getStylesheets().add("assignment3a.css");
         scene.setFill(Color.WHITE);
         stage.setScene(scene);
+
+        fontSelector.setOnAction(e->assignment3a.setFont(fontSelector, stage, scene, fontSizes));
+
         stage.show();
     }
 
@@ -556,9 +562,9 @@ public class SetLang {
         Text documentation = new Text("開發文件");
         Text download = new Text("下載");
         ChoiceBox<String> fontSelector= new ChoiceBox<>();
-        String[] fontSizes = {"Medium (Default)", "Small", "Large"};
+        String[] fontSizes = {"小(Default)", "中", "大"};
         fontSelector.getItems().addAll(fontSizes);
-        fontSelector.setValue("Select Font Size");
+        fontSelector.setValue("選擇字體大小");
         fontSelector.setPrefSize(175, 30);
         Text help =  new Text("幫助");
         ChoiceBox<String> language = new ChoiceBox<>();
@@ -579,7 +585,7 @@ public class SetLang {
         largeText.getStyleClass().add("largeText");
         Text intro = new Text("""
                 Java 擁有跨平台、物件導向、泛型程式設計的特性，廣泛
-                應用於企業級Web應用開發和移動應用開發。
+                應用於企業級网站應用開發和移動應用開發。
                 """);
         intro.getStyleClass().add("intro");
 
@@ -655,8 +661,8 @@ public class SetLang {
                 {
                     Label about = new Label("什么是 Java？:");
                     Text about_content = new Text("""
-                   Java 是由 Sun Microsystems 在 1995 年首先发布的编程语言和计算平台。有许多应用程序和 Web 站点只有在安装 Java
-                   后才能正常工作，而且这样的应用程序和 Web 站点日益增多。Java 快速、安全、可靠。从笔记本电脑到数据中心, 
+                   Java 是由 Sun Microsystems 在 1995 年首先发布的编程语言和计算平台。有许多应用程序和 网站 站点只有在安装 Java
+                   后才能正常工作，而且这样的应用程序和 网站 站点日益增多。Java 快速、安全、可靠。从笔记本电脑到数据中心, 
                    从游戏控制台到科学超级计算机，从手机到互联网，Java 无处不在
                    """);
                     Text reference = new Text("from java.com What is java page");
@@ -802,6 +808,9 @@ public class SetLang {
         scene.getStylesheets().add("assignment3a.css");
         scene.setFill(Color.WHITE);
         stage.setScene(scene);
+
+        fontSelector.setOnAction(e->assignment3a.setFont(fontSelector, stage, scene, fontSizes));
+
         stage.show();
     }
 

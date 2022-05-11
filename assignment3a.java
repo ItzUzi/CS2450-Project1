@@ -289,6 +289,8 @@ public class assignment3a extends Application{
         scene.setFill(Color.WHITE);
         stage.setScene(scene);
 
+        fontSelector.setOnAction(e->setFont(fontSelector, stage, scene, fontSizes));
+
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         stage.setX((primScreenBounds.getWidth() - stage.getWidth()) / 2); 
         stage.setY((primScreenBounds.getHeight() - stage.getHeight()) / 4); 
@@ -311,5 +313,20 @@ public class assignment3a extends Application{
             stage.setTitle("Java");
             lang.setEnglish(stage);
         }
+    }
+
+    public static void setFont(ChoiceBox <String> choiceBox, Stage stage, Scene scene, String[] fonts) {
+        stage.close();
+        scene.getStylesheets().clear();
+
+        if (choiceBox.getValue().equals(fonts[0]))
+            scene.getStylesheets().add("assignment3a.css");
+         else if (choiceBox.getValue().equals(fonts[1]))
+            scene.getStylesheets().add("SmallText.css");
+         else
+            scene.getStylesheets().add("LargeText.css");
+
+        stage.setScene(scene);
+        stage.show();
     }
 }
