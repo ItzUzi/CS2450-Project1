@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ScrollPane.ScrollBarPolicy;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -37,11 +38,19 @@ public class assignment3a extends Application{
         imageView.setPreserveRatio(true);
         Text documentation = new Text("Documentation");
         Text download = new Text("Downloads");
-        Text what_java = new Text("What is Java?");
+        ChoiceBox<String> fontSelector= new ChoiceBox<>();
+        String[] fontSizes = {"Medium (Default)", "Small", "Large"};
+        fontSelector.getItems().addAll(fontSizes);
+        fontSelector.setValue("Select Font Size");
+        fontSelector.setPrefSize(175, 30);
         Text help =  new Text("Help");
-        Text language = new Text("Language");
+        ChoiceBox<String> language = new ChoiceBox<>();
+        String[] languages = {"English (Default)", "Spanish", "Chinese"};
+        language.setValue("Select Language");
+        language.getItems().addAll(languages);
+        language.setOnAction(e-> setLanguage());
 
-        HBox textBox = new HBox(20, documentation, download, what_java, help, language);
+        HBox textBox = new HBox(20, documentation, download, help, fontSelector, language);
         textBox.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
         textBox.setPadding(new Insets(25, 25, 25, 400));
 
@@ -124,10 +133,10 @@ public class assignment3a extends Application{
             newWindow.setScene(scene);
             newWindow.show();
         });
-        Button learn_java = new Button("Learn Java");
+        Button learn_java = new Button("What is Java?");
         learn_java.setOnAction(e->
         {
-            Label about = new Label("Learn Java:");
+            Label about = new Label("What is Java:");
             Text about_content = new Text("""
                    Java is a programming language and computing platform first released by Sun Microsystems in 1995.
                    It has evolved from humble beginnings to power a large share of today’s digital world, by providing
@@ -142,17 +151,9 @@ public class assignment3a extends Application{
                    """);
             Text reference = new Text("from java.com What is java page");
 
-            about_content.setStyle("-fx-font-size: 16px;" +
-                                "-fx-fill: black;" +
-                                "-fx-font-weight: normal;");
-
-            reference.setStyle("-fx-font-size: 10px;" +
-                                "-fx-fill: grey;" +
-                                "-fx-font-weight: lighter;");
-
-            about.setStyle("-fx-font-size: 20px;"+
-                        "-fx-fill: black;" +
-                        "-fx-font-weight: bold;");
+            about_content.getStyleClass().add("intro");
+            reference.getStyleClass().add("reference");
+            about.getStyleClass().add("about");
 
             Stage newWindow = new Stage();
             newWindow.setTitle("About Java");
@@ -164,6 +165,7 @@ public class assignment3a extends Application{
             grid.setVgap(20);
             grid.setAlignment(Pos.CENTER);
             Scene scene = new Scene(grid, newWindow.getHeight(), newWindow.getWidth());
+            scene.getStylesheets().add("assignment3a.css");
             newWindow.setScene(scene);
             newWindow.show();
         }
@@ -296,5 +298,9 @@ public class assignment3a extends Application{
         stage.setY((primScreenBounds.getHeight() - stage.getHeight()) / 4); 
         stage.show();
         
+    }
+
+    private static void setLanguage() {
+
     }
 }
