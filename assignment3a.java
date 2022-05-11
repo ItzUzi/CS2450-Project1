@@ -6,12 +6,8 @@ import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollBar;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.control.ScrollPane.ScrollBarPolicy;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -45,10 +41,10 @@ public class assignment3a extends Application{
         fontSelector.setPrefSize(175, 30);
         Text help =  new Text("Help");
         ChoiceBox<String> language = new ChoiceBox<>();
-        String[] languages = {"English (Default)", "Spanish", "Chinese"};
+        String[] languages = {"English (Default)", "Español", "简体中文"};
         language.setValue("Select Language");
         language.getItems().addAll(languages);
-        language.setOnAction(e-> setLanguage());
+        language.setOnAction(e-> setLanguage(language, stage));
 
         HBox textBox = new HBox(20, documentation, download, help, fontSelector, language);
         textBox.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
@@ -300,7 +296,20 @@ public class assignment3a extends Application{
         
     }
 
-    private static void setLanguage() {
-
+    public static void setLanguage(ChoiceBox<String> choiceBox, Stage stage) {
+        SetLang lang = new SetLang();
+        if (choiceBox.getValue().equals("Español")) {
+            stage.close();
+            stage.setTitle("Java en Español");
+            lang.setSpanish(stage);
+        } else if (choiceBox.getValue().equals("简体中文")) {
+            stage.close();
+            stage.setTitle("Java");
+            lang.setChinese(stage);
+        } else {
+            stage.close();
+            stage.setTitle("Java");
+            lang.setEnglish(stage);
+        }
     }
 }
